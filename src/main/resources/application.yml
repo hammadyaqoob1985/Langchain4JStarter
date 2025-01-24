@@ -7,6 +7,6 @@ langchain4j:
       api-key: ${OPENAI_API_KEY}
       model-name: gpt-4
       temperature: 0
+      strict-tools: true
     embedding-model:
       api-key: ${OPENAI_API_KEY}
-    strict-tools: true
