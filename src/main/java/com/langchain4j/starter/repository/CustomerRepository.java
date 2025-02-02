@@ -1,6 +1,5 @@
-package com.langchain4j.starter;
+package com.langchain4j.starter.repository;
 
-import com.langchain4j.starter.dto.Booking;
 import com.langchain4j.starter.dto.Customer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

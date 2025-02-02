@@ -1,15 +1,13 @@
 package com.langchain4j.starter.config;
 
 
-import com.langchain4j.starter.BookingRepository;
-import com.langchain4j.starter.CustomerRepository;
+import com.langchain4j.starter.repository.BookingRepository;
+import com.langchain4j.starter.repository.CustomerRepository;
 import com.langchain4j.starter.dto.Booking;
 import com.langchain4j.starter.dto.BookingClass;
 import com.langchain4j.starter.dto.BookingStatus;
 import com.langchain4j.starter.dto.Customer;
 import jakarta.annotation.PostConstruct;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

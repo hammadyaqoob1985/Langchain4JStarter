@@ -1,8 +1,7 @@
 package com.langchain4j.starter.service;
 
 
-import com.langchain4j.starter.BookingRepository;
-import com.langchain4j.starter.config.DataLoader;
+import com.langchain4j.starter.repository.BookingRepository;
 import com.langchain4j.starter.dto.Booking;
 import com.langchain4j.starter.dto.BookingDetails;
 import com.langchain4j.starter.dto.BookingStatus;
