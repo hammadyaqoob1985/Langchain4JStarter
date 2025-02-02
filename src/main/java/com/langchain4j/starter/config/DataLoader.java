@@ -17,10 +17,8 @@ import java.util.List;
 import java.util.Random;
 
 @Component
-
 public class DataLoader {
 
-    private static final Logger logger = LoggerFactory.getLogger(DataLoader.class);
     private final CustomerRepository customerRepository;
     private final BookingRepository bookingRepository;
 
@@ -71,9 +69,9 @@ public class DataLoader {
         booking.setCustomer(customer);
         booking.setBookingClass(BookingClass.values()[random.nextInt(BookingClass.values().length)]);
         booking.setBookingStatus(BookingStatus.CONFIRMED);
-        LocalDate bookingDate = LocalDate.now().plusDays(random.nextInt());
+        LocalDate bookingDate = LocalDate.now().plusDays(random.nextInt(30) + 1);
         booking.setDate(bookingDate);
-        booking.setBookingTo(bookingDate.plusDays(7));
+        booking.setReturnDate(bookingDate.plusDays(7));
         booking.setSource(airportCodes.get(random.nextInt(airportCodes.size())));
         booking.setDestination(airportCodes.get(random.nextInt(airportCodes.size())));
         Booking savedBooking = bookingRepository.save(booking);

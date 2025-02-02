@@ -1,6 +1,5 @@
 package com.langchain4j.starter.dto;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -12,7 +11,7 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long bookingId;
     private LocalDate date;
-    private LocalDate bookingTo;
+    private LocalDate returnDate;
     @OneToOne
     private Customer customer;
     private String source;
@@ -20,10 +19,10 @@ public class Booking {
     private BookingStatus bookingStatus;
     private BookingClass bookingClass;
 
-    public Booking(Long bookingId, LocalDate date, LocalDate bookingTo, Customer customer, String source, String destination, BookingStatus bookingStatus, BookingClass bookingClass) {
+    public Booking(Long bookingId, LocalDate date, LocalDate returnDate, Customer customer, String source, String destination, BookingStatus bookingStatus, BookingClass bookingClass) {
         this.bookingId = bookingId;
         this.date = date;
-        this.bookingTo = bookingTo;
+        this.returnDate = returnDate;
         this.customer = customer;
         this.source = source;
         this.destination = destination;
@@ -50,12 +49,12 @@ public class Booking {
         this.date = date;
     }
 
-    public LocalDate getBookingTo() {
-        return bookingTo;
+    public LocalDate getReturnDate() {
+        return returnDate;
     }
 
-    public void setBookingTo(LocalDate bookingTo) {
-        this.bookingTo = bookingTo;
+    public void setReturnDate(LocalDate bookingTo) {
+        this.returnDate = bookingTo;
     }
 
     public Customer getCustomer() {
